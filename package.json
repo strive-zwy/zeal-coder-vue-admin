@@ -7,10 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-plus": "^1.0.2-beta.70",
+    "qs": "^6.10.1",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
+    "vue-axios": "^3.2.5",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -23,6 +26,8 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
+    "echarts": "^5.1.2",
+    "echarts-gl": "^2.0.8",
     "lib-flexible": "^0.3.2",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",

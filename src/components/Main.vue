@@ -24,21 +24,24 @@
       </el-row>
     </el-col>
     <el-col class="hidden-md-and-down"  :xs="5" :sm="5" :md="5" :lg="5" :xl="5">
+      <MainRightIcon></MainRightIcon>
     </el-col>
     <el-col class="hidden-lg-and-up" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-      <div class="btn-grad main-middle">进入博客</div>
+      <MainBottomIcon></MainBottomIcon>
     </el-col>
   </el-row>
 </template>
 
 <script>
+import MainBottomIcon from "@/components/main/MainBottomIcon";
+import MainRightIcon from "@/components/main/MainRightIcon";
 export default {
-  name: "Main"
+  name: "Main",
+  components: {MainRightIcon, MainBottomIcon}
 }
 </script>
 
 <style scoped lang="stylus">
-
 .ava
   margin 50px 30px 0
   animation beTop 2s cubic-bezier(0.25,0.5,0.75,1) infinite
@@ -52,34 +55,27 @@ export default {
   align-items: center
   flex-direction: column
   font-family: 'Comic Sans MS', cursive
-  //font-family: 'Concert One', cursive;
   perspective: 3000px
 .main-left-h,.main-left-hs>h1,h2
   padding: 0
   position: relative
   color: #30cce3
-//font-size 16px
-//margin 5px 0
 .main-left-h>h1
   font-size: 8em;
-  //font-size 80px
   margin 0
   animation: 5s rotate ease-in-out infinite;
 .main-left-hs>h1
   font-size: 12rem;
-  //font-size 80px
   margin 0
   animation: 5s rotate ease-in-out infinite;
 .main-left-h>h2
-  font-size: 5rem;
-  //font-size 60px
+  font-size: 6rem;
   letter-spacing: -4px;
   margin 0
   animation: 2.5s rotate2 ease-in-out infinite;
 
 .main-left-hs>h2
   font-size: 10rem;
-  //font-size 60px
   letter-spacing: -4px;
   margin 0
   animation: 2.5s rotate2 ease-in-out infinite;
@@ -132,28 +128,6 @@ export default {
 .main-left-hs>h2::after
   color: #038fa4;
   animation: 2.5s hs2-after ease-in-out infinite;
-.btn-grad {
-  background-image: linear-gradient(to right, #000428 0%, #011325 51%, #000428  100%)
-}
-.btn-grad {
-  font-size 24px
-  margin: 30px 60px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow:  20px 20px 40px #000912,-20px -20px 40px #021d38;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
 betop(val)
   top val
 @keyframes beTop{
@@ -216,6 +190,48 @@ betop(val)
   }
   50% {
     transform: translate3d(0px, -6px, -20px);
+  }
+}
+//------------------hs----------------------------
+@keyframes hs2-after {
+  0%, 100% {
+    transform: translate3d(0px, 2px, -4px);
+  }
+  50% {
+    transform: translate3d(0px, -1px, -4px);
+  }
+}
+@keyframes hs2-before {
+  0%, 100% {
+    transform: translate3d(0px, 4px, -8px);
+  }
+  50% {
+    transform: translate3d(0px, -2px, -8px);
+  }
+}
+@keyframes hs1-after {
+  0%, 100% {
+    transform: translate3d(3px, 2px, -3px);
+  }
+  50% {
+    transform: translate3d(-3px, 2px, -3px);
+  }
+}
+@keyframes hs1-before {
+  0%, 100% {
+    transform: translate3d(6px, 4px, -6px);
+  }
+  50% {
+    transform: translate3d(-6px, 4px, -6px);
+  }
+}
+//颜色渐变
+@-webkit-keyframes hue {
+  0%,100%{
+    -webkit-filter: hue-rotate(0deg);
+  }
+  50%{
+    -webkit-filter: hue-rotate(45deg);
   }
 }
 </style>

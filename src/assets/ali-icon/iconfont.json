@@ -1,0 +1,72 @@
+{
+  "id": "2729480",
+  "name": "vue",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5682979",
+      "name": "csdn",
+      "font_class": "csdn",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4546550",
+      "name": "csdn",
+      "font_class": "csdn2",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "19097249",
+      "name": "csdn",
+      "font_class": "csdn48",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "1126900",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "1817709",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "3506933",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6822916",
+      "name": "wechat",
+      "font_class": "wechat2",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "6840181",
+      "name": "github",
+      "font_class": "github1",
+      "unicode": "e76b",
+      "unicode_decimal": 59243
+    },
+    {
+      "icon_id": "14055554",
+      "name": "QQ",
+      "font_class": "QQ2",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}

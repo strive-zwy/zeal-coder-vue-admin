@@ -1,24 +1,56 @@
 <template>
   <el-row>
     <el-col  :xs="24" :sm="24" :md="24" :lg="5" :xl="5">
-      <span id="zeal">zeal-coder</span>
+      <RouterLink to="/">
+        <span id="zeal">zeal-coder</span>
+      </RouterLink>
     </el-col>
     <el-col  :xs="24" :sm="24" :md="24" :lg="19" :xl="19">
-      <span class="nav-btn">博客</span>
-      <span class="nav-btn">作品集</span>
-      <span class="nav-btn">关于我</span>
+      <RouterLink to="/blog">
+        <span :class="{navBtn:navBtn,navBtnAboutMe:navBtnAboutMe,isPick:isPickA}">博客</span>
+      </RouterLink>
+      <el-dropdown>
+        <span class="el-dropdown-link" :class="{navBtn:navBtn,navBtnAboutMe:navBtnAboutMe,isPick:isPickB}">
+        后花园  <caret-bottom style="width: 1em; height: 1em; "/>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item>
+              <RouterLink to="/message">
+                <span >留言板</span>
+              </RouterLink>
+            </el-dropdown-item>
+            <el-dropdown-item>作品集</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+      <RouterLink to="/aboutMe">
+        <span :class="{navBtn:navBtn,navBtnAboutMe:navBtnAboutMe,isPick:isPickC}">关于我</span>
+      </RouterLink>
     </el-col>
   </el-row>
 </template>
 
 <script>
+import { CaretBottom } from '@element-plus/icons'
 export default {
-  name: "Header"
+  name: "Header",
+  components: {
+    CaretBottom
+  },
+  data () {
+    return {
+      isPickB: false,
+      navBtn : true,
+    }
+  },
+  props:['navBtnAboutMe','isPickC','isPickA'],
 }
 </script>
 
 <style scoped lang="stylus">
-
+a
+  text-decoration none
 #zeal
   //font-size 2rem
   font-size 30px
@@ -26,14 +58,13 @@ export default {
   color white
   font-weight bold
   letter-spacing 5px
-  line-height 80px
+  line-height 60px
   margin 0 20px 0 0
   text-shadow: 2px 2px 4px #4d4d4d;
-
-.nav-btn
+.navBtn
   //font-size 1.5rem
-  font-size 22px
-  line-height 80px
+  font-size 18px
+  line-height 60px
   color rgba(255, 255, 255, 0.51)
   width 140px
   height 50px
@@ -43,8 +74,7 @@ export default {
   top -3px
   border-radius 15px
   text-shadow: 2px 2px 4px #706f6f;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-.nav-btn:hover
+.navBtn:hover
   cursor pointer
   top 3px
   color #30cce3
@@ -54,6 +84,32 @@ export default {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 5s infinite linear;
   text-shadow: 4px 4px 8px #5e5e5e;
+.navBtnAboutMe
+  //font-size 1.5rem
+  font-size 18px
+  line-height 60px
+  color #ffffff
+  width 140px
+  height 50px
+  margin 0 0 0 40px
+  border none
+  position relative
+  top -3px
+  border-radius 15px
+  text-shadow: 2px 2px 4px #706f6f;
+.navBtnAboutMe:hover
+  cursor pointer
+  top 3px
+  color #ee609c
+  background: #fff;
+  background-image: -webkit-linear-gradient(45deg,#ee609c,#fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 5s infinite linear;
+  text-shadow: 4px 4px 8px #5e5e5e;
+.isPick
+  font-size 20px
+  color #d081f1
 /*---- 动画 ----*/
 
 //颜色渐变
