@@ -5,8 +5,8 @@
         <span id="zeal">zeal-coder</span>
       </RouterLink>
     </el-col>
-    <el-col  :xs="24" :sm="24" :md="24" :lg="19" :xl="19">
-      <RouterLink to="/blog">
+    <el-col  :xs="24" :sm="24" :md="24" :lg="14" :xl="14">
+      <RouterLink :to="{name:'Blog',params:{id:666,type:2}}">
         <span :class="{navBtn:navBtn,navBtnAboutMe:navBtnAboutMe,isPick:isPickA}">博客</span>
       </RouterLink>
       <el-dropdown>
@@ -27,6 +27,8 @@
       <RouterLink to="/aboutMe">
         <span :class="{navBtn:navBtn,navBtnAboutMe:navBtnAboutMe,isPick:isPickC}">关于我</span>
       </RouterLink>
+    </el-col>
+    <el-col  :xs="24" :sm="24" :md="24" :lg="5" :xl="5">
     </el-col>
   </el-row>
 </template>

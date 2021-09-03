@@ -5,7 +5,7 @@
   <el-row justify="center">
     <el-col id="aboutMe" :xs="23" :sm="23" :md="23" :lg="16" :xl="16">
       <p id="name">张婉玉</p>
-      <p id="det">Java后端/上学中...</p>
+      <p id="det">Java后端 / 上学中...</p>
       <el-row justify="center">
         <el-col span="3">
           <Icon></Icon>
@@ -19,7 +19,7 @@
         </el-col>
         <h1>我的技能树😎</h1>
         <el-divider class=" ider"></el-divider>
-        <el-col :xs="20" :sm="20" :md="20" :lg="20" :xl="20" class="blok">
+        <el-col :xs="24" :sm="24" :md="24" :lg="20" :xl="20" class="blok">
           <Skill></Skill>
         </el-col>
 <!--        <el-divider class="ider"></el-divider>

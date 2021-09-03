@@ -14,9 +14,22 @@ import * as echarts from 'echarts'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+// 添加请求拦截器，在请求头中加token
+
+axios.interceptors.request.use(
+    config => {
+        if (localStorage.getItem('Authorization')) {
+            config.headers.Authorization = localStorage.getItem('Authorization');
+        }
+        return config;
+    },
+    error => {
+        return Promise.reject(error);
+    });
+
 const app = createApp(App).use(store).use(router).use(ElementPlus)
-axios.defaults.baseURL=''
-app.use(VueAxios, axios)
+// axios.defaults.baseURL=''
+app.use(VueAxios, axios);
 app.config.globalProperties.echarts = echarts;
 app.provide('axios', app.config.globalProperties.axios)
 app.mount('#app')
